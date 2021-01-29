@@ -11,15 +11,15 @@ function addIdentationToIndividualStyle(style: string) {
 }
 
 function formatStyles(styles: string) {
-  const stylesLines = styles
-    .replace("{", "")
-    .replace("}", "")
+	const stylesLines = styles
+		.replace("{", "")
+		.replace("}", "")
 		.split(",")
 		.map(style => style.trim())
-    .map(addIdentationToIndividualStyle)
-    .join(",\n");
+		.map(addIdentationToIndividualStyle)
+		.join(",\n");
 
-  return ["{", stylesLines + ",", "  }"].join("\n");
+	return ["{", stylesLines + ",", "  }"].join("\n");
 }
 
 export function activate(context: vscode.ExtensionContext) {
@@ -46,7 +46,7 @@ export function activate(context: vscode.ExtensionContext) {
 		let row = document.lineCount + 1;
 
 		activeTextEditor.edit(edit => {
-			const hasStylesDefined= editorCode.includes(`StyleSheet.create`);
+			const hasStylesDefined = editorCode.includes(`StyleSheet.create`);
 			if (hasStylesDefined) {
 				row = document.positionAt(editorCode.indexOf('StyleSheet.create')).line;
 				userStylesSelection = `  ${userStylesName}: ${formatStyles(stylesText)},\n`;
