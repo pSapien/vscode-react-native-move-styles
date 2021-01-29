@@ -2,9 +2,10 @@
 
 A vscode extension that allows user to moves style from JSX element to StyleSheet.
 
------------------------------------------------------------------------------------------------------------
 
 ## HOW TO USE
+
+![demo1](assets/demo.gif)
 
 * Select the style which you want to move.
 * Press `Ctrl+Shift+P` or your shortcut key to open command panel.
