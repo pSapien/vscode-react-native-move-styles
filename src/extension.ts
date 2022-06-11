@@ -16,6 +16,7 @@ function formatStyles(styles: string) {
     .replace("}", "")
     .split(",")
     .map(style => style.trim())
+    .filter(style => !!style)
     .map(addIdentationToIndividualStyle)
     .join(",\n");
 
