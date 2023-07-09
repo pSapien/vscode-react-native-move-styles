@@ -1,8 +1,12 @@
 {
 	"name": "react-native-move-styles",
 	"displayName": "react-native-move-styles",
+	"publisher": "sapien",
+	"repository": {
+		"url": "https://github.com/pSapien/vscode-react-native-move-styles"
+	},
 	"description": "An extension that allows to move inline styles in React Native to the StyleSheet.create",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
@@ -19,7 +23,18 @@
 				"command": "react-native-move-styles.helloWorld",
 				"title": "move styles to Stylesheet in React Native"
 			}
-		]
+		],
+		"configuration": {
+			"title": "React Native Move Styles",
+			"properties": {
+				"react-native-move-styles.insertOrder": {
+					"type": "string",
+					"default": "start",
+					"enum": ["start", "end"],
+					"enumDescriptions": ["Insert styles at the start of the StyleSheet object.", "Insert styles at the end of the StyleSheet object."]
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
