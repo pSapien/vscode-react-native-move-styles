@@ -28,4 +28,7 @@ To change the insertion order:
 
 1. Go to your "settings.json" file. (or use the shortcut `Ctrl+,`)
 2. Make sure you are viewing the json file.
-3. Insert `"react-native-move-styles.insertOrder" = "start"` or `"react-native-move-styles.insertOrder" = "end"`
+3. Add 
+ `"react-native-move-styles.insertOrder": "start"` 
+ or 
+ `"react-native-move-styles.insertOrder": "end"`
